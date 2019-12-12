@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "26bd5730-541f-4c7a-8a99-736ed8c0b0c8",
+		"name": "Party Wall",
+		"description": "Endpoints to test Praty Wall API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userName",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Test@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/auth/register?=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userName",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Test@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Drink",
+			"item": [
+				{
+					"name": "Drink Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGYwMTY4NGVjN2E5ZDAwMTNkYTg5ZTYiLCJ1c2VyTmFtZSI6InRlc3QiLCJpYXQiOjE1NzYwMTU0OTcsImV4cCI6MTU3NjAyMjY5N30.REb--b1ymYUjMfeWLC0bbdbomGviaRODN7BFawrMH1w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "burger",
+									"type": "text"
+								},
+								{
+									"key": "volume",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/drink",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"drink"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drink Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY1MDAxNzQ3LCJleHAiOjE1NjUwMDg5NDd9.NFq5JjFI4nEU7_1oAt2Zj91q0vRSdd3d5to-T_7aRJ4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/drink/5d43d753cdbdd1264291806c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"drink",
+								"5d43d753cdbdd1264291806c"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Food",
+			"item": [
+				{
+					"name": "Food Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGYwMTY4NGVjN2E5ZDAwMTNkYTg5ZTYiLCJ1c2VyTmFtZSI6InRlc3QiLCJpYXQiOjE1NzYwMTU0OTcsImV4cCI6MTU3NjAyMjY5N30.REb--b1ymYUjMfeWLC0bbdbomGviaRODN7BFawrMH1w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "burger",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "testing book desc",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/food",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Food Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDQwMzc0ODllY2I2ZDUyNjAzZDQ1ZjMiLCJmaXJzdE5hbWUiOiJ0ZXN0IiwibGFzdE5hbWUiOiJ0ZXN0aW5nIiwiZW1haWwiOiJ0ZXN0QHRlc3RpbmcuY29tIiwiaWF0IjoxNTY1MDAxNzQ3LCJleHAiOjE1NjUwMDg5NDd9.NFq5JjFI4nEU7_1oAt2Zj91q0vRSdd3d5to-T_7aRJ4"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/food/5d43d753cdbdd1264291806c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"food",
+								"5d43d753cdbdd1264291806c"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Items List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGYwMTY4NGVjN2E5ZDAwMTNkYTg5ZTYiLCJ1c2VyTmFtZSI6InRlc3QiLCJpYXQiOjE1NzYwMTU0OTcsImV4cCI6MTU3NjAyMjY5N30.REb--b1ymYUjMfeWLC0bbdbomGviaRODN7BFawrMH1w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"item"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
